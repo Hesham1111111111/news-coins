@@ -1,7 +1,7 @@
 import 'package:file1/style/Style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
+import 'package:shimmer/shimmer.dart';
 import '../../network/apiserver_coins.dart';
 import '../manger/coin_cubit.dart';
 import '../manger/con_state.dart';
@@ -31,10 +31,38 @@ class Coins extends StatelessWidget {
                 return ArticlesCoins(coins: state.coins[index]);
               },
             );
-          } else if (state is ErrorStateCoins) {
-            return Text("Error ", style: Stayle.stayle3);
+          } else if (state is InitialStateCoins) {
+            return ListView.builder(
+              itemCount: 8,
+              itemBuilder: (context, index) {
+                return Shimmer.fromColors(
+                  baseColor: Colors.grey[300]!,
+                  highlightColor: Colors.grey[100]!,
+                  child: const ListTile(
+                    leading: CircleAvatar(
+                      radius: 20,
+                      backgroundColor: Colors.white,
+                    ),
+                    title: SizedBox(
+                      height: 10,
+                      width: 100,
+                      child: DecoratedBox(
+                        decoration: BoxDecoration(color: Colors.white),
+                      ),
+                    ),
+                    subtitle: SizedBox(
+                      height: 10,
+                      width: 50,
+                      child: DecoratedBox(
+                        decoration: BoxDecoration(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                );
+              },
+            );
           } else {
-            return Center(child: CircularProgressIndicator());
+            return Text("Error ", style: Stayle.stayle3);
           }
         },
       ),
