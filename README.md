@@ -22,9 +22,11 @@ https://github.com/user-attachments/assets/49515462-9eb4-4987-8149-62d0c7a8db8c
 في البرمجة بـ state management مثل BLoC أو Redux، الـ Event بيكون رسالة بتقول للـ Bloc أو الـ State "فيه حاجة جديدة حصلت، اتصرف".
 
 المستخدم (User) أو النظام هو اللي بيولد الـ Event، وبعدين الـ Bloc/Controller بياخد الإيفنت ويعالجه.
-read VS watch
 
-🔹 read
+
+Read VS watch
+
+read
 
 موجودة في package:provider أو flutter_bloc.
 
