@@ -1,4 +1,3 @@
-
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../network/apiserver_newws.dart';
 import '../Model/news_view.dart';
@@ -9,17 +8,16 @@ class AppCubit extends Cubit<AppState> {
 
   ApiServer apiServer = ApiServer();
   List<Article> newarticles = [];
-  String selectTitle ="General";
+  String selectTitle = "General";
 
-  getNews({required String Category }) async {
+  getNews({required String Category}) async {
     try {
-      newarticles = await apiServer.getNews(title:Category);
+      newarticles = await apiServer.getNews(title: Category);
       selectTitle = Category;
-      emit(SuccessState(articles: newarticles));
+      emit(SuccessState(articles: newarticles, title: Category));
     } catch (e) {
-      emit(ErrorState( Error: e.toString()));
+      emit(ErrorState(Error: e.toString()));
       // TODO
     }
   }
 }
-

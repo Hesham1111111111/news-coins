@@ -6,8 +6,9 @@ class InitialState extends AppState {}
 
 class SuccessState extends AppState {
   final List<Article> articles;
+  final String title;
 
-  SuccessState({required this.articles});
+  SuccessState({required this.title, required this.articles});
 }
 
 class LoginState extends AppState {}

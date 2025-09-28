@@ -5,7 +5,7 @@ abstract class Stayle {
   static var stayle1 = TextStyle(
     color: Colors.white,
     fontWeight: FontWeight.bold,
-    fontSize: 35,
+    fontSize: 30,
   );
   static var stayle2 = TextStyle(
     color: Colors.teal,

@@ -13,14 +13,7 @@ class ApiServer {
     List<Article> articles = [];
     print("========================= ${response.statusCode}");
     for (var item in json["articles"]) {
-      articles.add(
-        Article(
-          title: item["title"],
-          description: item["description"],
-          urlToImage: item["urlToImage"],
-          url: item["url"],
-        ),
-      );
+      articles.add(Article.myJson(json: item));
     }
     return articles;
   }

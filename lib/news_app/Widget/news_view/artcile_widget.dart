@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import '../../Model/news_view.dart';
@@ -24,13 +25,10 @@ class _ArtcileWidgetState extends State<ArtcileWidget> {
             topLeft: Radius.circular(60),
             topRight: Radius.circular(60),
           ),
-          child: Image.network(
-            widget.article.urlToImage ??
-                "https://static.vecteezy.com/system/resources/previews/022/059/000/non_2x/no-image-available-icon-vector.jpg",
-
-            width: double.infinity,
-            height: 200,
-            fit: BoxFit.fill,
+          child: CachedNetworkImage(
+            imageUrl:
+                widget.article.urlToImage ??
+                "https://png.pngtree.com/png-vector/20221125/ourmid/pngtree-no-image-available-icon-flatvector-illustration-pic-design-profile-vector-png-image_40966566.jpg",
           ),
         ),
         InkWell(

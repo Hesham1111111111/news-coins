@@ -13,15 +13,7 @@ class CoinServers {
     List<Coin> coins = [];
 
     for (var item in response.data) {
-      coins.add(
-        Coin(
-          name: item["name"],
-          symbol: item["symbol"],
-          image: item["image"],
-          current_price: item["current_price"].toString(),
-          price_change: item["atl"].toString(),
-        ),
-      );
+      coins.add(Coin.myJeso(json: item));
     }
 
     return coins;
