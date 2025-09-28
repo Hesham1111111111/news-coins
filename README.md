@@ -9,7 +9,7 @@ https://github.com/user-attachments/assets/bb2959c6-ba87-4ae9-a690-3b9b5e987368
 ش
 # News And Coins
   شش
-https://github.com/user-attachments/assets/49515462-9eb4-4987-8149-62d0c7a8db8c
+https://github.com/user-attachments/assets/49515462-9eb4-4987-8149-62d0c7a8db8
 
  ## Search  
     Function VS Event 
