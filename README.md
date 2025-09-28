@@ -1,4 +1,4 @@
-# News And Coins App 📲
+# News And Coins And Product  App 📲
 
 
 ## Run 
